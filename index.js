@@ -67,7 +67,6 @@ function monta_numero(tecla) {
         valor_total = `${valor_cima} ${ultima_operacao} ${num_display}`;
         linha_cima.innerText = valor_total;
 
-        // Executa o cálculo dinamicamente usando o mapa de operações
         const resultado = operacoes[ultima_operacao](Number(valor_cima), Number(num_display));
 
         num_display = String(resultado);
@@ -75,11 +74,9 @@ function monta_numero(tecla) {
         ultima_operacao = "";
       }
     } else {
-      e;
       if (valor_cima === "0") {
         valor_cima = num_display;
       } else if (ultima_operacao) {
-        // Se já havia uma operação pendente, calcula antes de acumular a próxima
         valor_cima = String(operacoes[ultima_operacao](Number(valor_cima), Number(num_display)));
       }
 
