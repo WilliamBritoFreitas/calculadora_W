@@ -13,8 +13,12 @@
   <body class="bg-black flex min-h-screen items-center justify-center">
     <div id="device">
       <h2 class="text-white">Calculadora</h2>
-      <div id="Painel" class="px-1 py-3 text-4xl flex justify-end border-2 border-gray-500 w-64">
-        <span id="display" class="text-white">0</span>
+
+      <div id="Painel" class="px-1 py-3 relative flex justify-end border-2 border-gray-500 w-64">
+        <div>
+          <span id="linha_cima" class="text-amber-50 text-1xl absolute left-1 -top-1">0</span>
+        </div>
+        <span id="display" class="text-white text-4xl transition-all duration-150">0</span>
       </div>
 
       <div id="teclado" class="mt-4 w-64 grid grid-cols-4 gap-x-2 gap-y-1.5">
@@ -23,15 +27,15 @@
         <button id="bt_C" class="w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">C</button>
         <button id="bt_bs" class="w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">&larr;</button>
 
-        <button id="bt_mais" class="w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">+</button>
-        <button id="bt_menos" class="w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">-</button>
-        <button id="bt_multi" class="w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">x</button>
-        <button id="bt_divide" class="w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">&divide;</button>
+        <button id="bt_mais" class="bt_opera w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">+</button>
+        <button id="bt_menos" class="bt_opera w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">-</button>
+        <button id="bt_multi" class="bt_opera w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">*</button>
+        <button id="bt_divisao" class="bt_opera w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">/</button>
 
         <button class="bt_num w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">7</button>
         <button class="bt_num w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">8</button>
         <button class="bt_num w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">9</button>
-        <button id="bt_igual" class="row-span-4 h-full w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-800">=</button>
+        <button id="bt_igual" class="bt_opera row-span-4 h-full w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-800">=</button>
 
         <button class="bt_num w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">4</button>
         <button class="bt_num w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">5</button>
@@ -44,7 +48,7 @@
         <!-- <button class="w-full  py-3 bg-gray-600 text-white rounded-xs">t</button> -->
 
         <button id="bt_troca" class="w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">+/-</button>
-        <button id="bt_0" class="w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">0</button>
+        <button class="bt_num w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">0</button>
         <button id="bt_ponto" class="w-full py-3 bg-gray-600 text-white rounded-xs hover:bg-gray-500">,</button>
         <!-- <button class="w-full  py-3 bg-gray-600 text-white rounded-xs">t</button> -->
       </div>
